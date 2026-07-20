@@ -13,9 +13,6 @@ extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND, UINT, WPARAM,
 
 namespace atomic::gui
 {
-    // ------------------------------------------------------------------
-    // D3D11-State
-    // ------------------------------------------------------------------
     static ID3D11Device*           g_Device        = nullptr;
     static ID3D11DeviceContext*    g_Context       = nullptr;
     static IDXGISwapChain*         g_SwapChain     = nullptr;
@@ -88,9 +85,6 @@ namespace atomic::gui
         return DefWindowProc(hwnd, msg, wParam, lParam);
     }
 
-    // ------------------------------------------------------------------
-    // Haupt-UI (pro Frame)
-    // ------------------------------------------------------------------
     static void DrawUi()
     {
         static char errorMsg[256] = "";
@@ -109,10 +103,6 @@ namespace atomic::gui
 
         ImGui::End();
     }
-
-    // ------------------------------------------------------------------
-    // GUI-Thread
-    // ------------------------------------------------------------------
     void RunGuiThread(void* hModule)
     {
         WNDCLASSEXW wc = { sizeof(wc), CS_CLASSDC, WndProc, 0, 0,
