@@ -3,11 +3,6 @@
 #include "gui.h"
 #include "script.h"
 
-// ============================================================================
-//  Einstiegspunkt der Plugin-DLL fuer Equalizer APO.
-//  Beim Laden: Init-Scripts ausfuehren und GUI in eigenem Thread starten.
-// ============================================================================
-
 static HANDLE g_GuiThread = nullptr;
 
 static DWORD WINAPI GuiThreadEntry(LPVOID hModule)
