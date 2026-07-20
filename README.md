@@ -1,3 +1,3 @@
 ## Equalizer Plugin RAT
 
-# ich hab fetten durchfall
+melon hilf mir oder ich krieg durchfall
