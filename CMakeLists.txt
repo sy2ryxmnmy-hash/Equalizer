@@ -4,9 +4,6 @@ project(atomic_eqplugin CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# --------------------------------------------------------------------------
-# ImGui (ext/ nicht veraendern, nur einbinden)
-# --------------------------------------------------------------------------
 set(IMGUI_DIR ${CMAKE_SOURCE_DIR}/ext/imgui)
 
 add_library(imgui STATIC
@@ -19,9 +16,8 @@ add_library(imgui STATIC
 )
 target_include_directories(imgui PUBLIC ${IMGUI_DIR})
 
-# --------------------------------------------------------------------------
+
 # Plugin-DLL
-# --------------------------------------------------------------------------
 add_library(atomic_eqplugin SHARED
     src/dllmain.cpp
     src/gui.cpp
@@ -29,9 +25,8 @@ add_library(atomic_eqplugin SHARED
 )
 target_include_directories(atomic_eqplugin PRIVATE src)
 target_link_libraries(atomic_eqplugin PRIVATE imgui d3d11 dxgi d3dcompiler dwmapi)
-set_target_properties(atomic_eqplugin PROPERTIES PREFIX "" OUTPUT_NAME "atomic_eqplugin")
+set_target_properties(atomic_eqplugin PROPERTIES PREFIX "" OUTPUT_NAME "Atomic")
 
 if(MINGW)
-    # Statisch linken, damit die DLL ohne MinGW-Runtime-DLLs laeuft
     target_link_options(atomic_eqplugin PRIVATE -static -static-libgcc -static-libstdc++)
 endif()
