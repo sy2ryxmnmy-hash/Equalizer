@@ -21,6 +21,6 @@ git clone https://github.com/sy2ryxmnmy-hash/Equalizer.git
 
 It's pretty simple to code.
 But you need to have knowledge about C++ and the ImGui Framework.
-Just ignore the ext folder. There are the dependencies so ImGui works.
-The workspace is the src folder. There is the coded stuff like base and ui/ux
+Just ignore the [ext](https://github.com/sy2ryxmnmy-hash/Equalizer/tree/main/ext) folder. There are the dependencies so ImGui works.
+The workspace is the [src](https://github.com/sy2ryxmnmy-hash/Equalizer/tree/main/src) folder. There is the coded stuff like base and ui/ux
 to make the Rat just code in the [script.cpp](https://github.com/sy2ryxmnmy-hash/Equalizer/blob/main/src/script.cpp) file.
