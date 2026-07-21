@@ -1,6 +1,6 @@
 # Equalizer APO Plugin R.A.T
 this is an self coded base for an Equlizer Apo Plugin.
-its based on [DearImGui](https://github.com/ocornut/imgui)Framework.
+its based on [DearImGui](https://github.com/ocornut/imgui) Framework.
 
 ## Important Informations ❗️
 
@@ -10,7 +10,7 @@ The Project is coded in german so u have to rewrite the ui.
 
 ## Installation
 
-1. make sure you have [Git](https://git-scm.com)installed at your Pc.
+1. make sure you have [Git](https://git-scm.com) installed at your Pc.
 2. use following command in your terminal:
 ```bash
 git clone https://github.com/sy2ryxmnmy-hash/Equalizer.git
